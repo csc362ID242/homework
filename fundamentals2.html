@@ -10,8 +10,8 @@
     <script>
 
       const array = [92, 56, 14, 73, 22, 38, 93, 45, 55]
-
       var int = 50;
+
       for (i = 0; i < array.length; i++){
         d3.select("#chart").append("circle")
             .attr("r", array[i]/2)
@@ -23,11 +23,13 @@
       array.sort();
 
       setTimeout(function() {
-        d3.select("#chart").selectAll("circle")
-          .data(array)
-          .transition().duration(1500)
-            .attr("cx", d => d)
+          d3.select("#chart").selectAll("circle")
+            .data(array)
+            .transition().duration(1500)
+            .attr("r", d => d/2)
       }, 2000)
+
+
     </script>
   </body>
 </html>
