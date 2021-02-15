@@ -1,0 +1,60 @@
+<!--
+Kylee Taylor
+-->
+<body>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+
+  <!-- Set up basic webpage structure -->
+  <div id="header"></div>
+  <div id="nominal"></div>
+  <div id="ordinal"></div>
+  <div id="interval"></div>
+  <div id="ratio"></div>
+
+  <style>
+    .darkred {
+        color: #8B0000;
+        background-color:
+    }
+    .darkred {
+        color: #8B0000;
+    }
+    .firebrick {
+        color: #B22222;
+    }
+    .indianred {
+        color: #CD5C5C;
+    }
+    .salmon {
+        color: #FA8072;
+    }
+  </style>
+
+  <script>
+    //your code goes here
+    const firstD = d3.select("#header").classed('bold', true);
+    const secondD = d3.select("#nominal").classed('darkred', true);
+    const thirdD = d3.select("#ordinal").classed('firebrick', true);
+    const fourthD = d3.select("#interval").classed('indianred', true);
+    const fifthD = d3.select("#ratio").classed('salmon', true);
+
+    firstD.text("This webpage explains data types with the help of definitions and examples.");
+
+    secondD.append("h1").text("Nominal");
+    secondD.append("p").text("A nominal data type is used to label a variable that does not have any quantitative value.");
+    secondD.append("p").text("Example: Gender (Male, Female, etc).");
+
+    thirdD.append("h1").text("Ordinal");
+    thirdD.append("p").text("An ordinal data type is used to represent variables that can be placed in order and/or ranked.");
+    thirdD.append("p").text("Example: Satisfaction rating (extremely dislike, dislike, neutral, like, extremely like).");
+
+    fourthD.append("h1").text("Interval");
+    fourthD.append("p").text("An interval data type is used to show measurable, quantitative data on a scale. It has no 'true zero' and can be added or subtracted but not multiplied or divided.");
+    fourthD.append("p").text("Example: Temperature (Fahrenheit or Celsius).");
+
+    fifthD.append("h1").text("Ratio");
+    fifthD.append("p").text("A ratio data type is used to display quantitative data that has a definite difference between each variable. It has a 'true zero' but cannot be represented by a negative value.");
+    fifthD.append("p").text("Example: Weight.");
+  </script>
+
+</body>
